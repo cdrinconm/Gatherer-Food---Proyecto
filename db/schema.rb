@@ -10,15 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190309003308) do
+ActiveRecord::Schema.define(version: 20190309160121) do
+
+  create_table "barrios", force: :cascade do |t|
+  end
+
+  create_table "organizaciones", force: :cascade do |t|
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "titulo"
-    t.datetime "created_ad"
-    t.datetime "updated_ad"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "recolectas", force: :cascade do |t|
+  end
+
+  create_table "recolectas_realizadas", force: :cascade do |t|
+    t.string   "organizacion"
+    t.datetime "fecha"
+    t.string   "direccion"
+    t.decimal  "cantidadKilos"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "representantes", force: :cascade do |t|
   end
 
 end
