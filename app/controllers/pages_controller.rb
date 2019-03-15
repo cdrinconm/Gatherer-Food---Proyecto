@@ -8,4 +8,7 @@ class PagesController < ApplicationController
     
     def suscribe
     end
+    
+    def newPost
+    end
 end

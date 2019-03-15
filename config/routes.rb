@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   get 'pages/login', to: "pages#login"
   
-  get 'posts/new', to: "posts#new"
+  get 'posts/newPost', to: "posts#newPost"
   
 
   
