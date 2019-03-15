@@ -6,9 +6,14 @@ Rails.application.routes.draw do
   
   get 'pages/login', to: "pages#login"
   
-  get 'posts/newPost', to: "posts#newPost"
+  get 'posts/new', to: "posts#new"
   
 
   
   resources :posts
+  resources :organizaciones
+  resources :barrios
+  resources :representantes
+  resources :recolectasrealizadas
+  resources :recolectaspendientes
 end

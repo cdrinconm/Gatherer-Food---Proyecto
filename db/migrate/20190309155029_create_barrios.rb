@@ -1,4 +1,4 @@
-class CreateBarrio < ActiveRecord::Migration[5.0]
+class CreateBarrios < ActiveRecord::Migration[5.0]
   def change
     create_table :barrios do |t|
       t.string :nombre

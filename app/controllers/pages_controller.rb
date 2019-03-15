@@ -9,6 +9,6 @@ class PagesController < ApplicationController
     def suscribe
     end
     
-    def newPost
+    def new
     end
 end
