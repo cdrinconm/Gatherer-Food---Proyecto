@@ -1,20 +1,20 @@
 class BarriosController < ApplicationController
   def new
-    @Barrios = Barrios.new    
+    @barrio = Barrios.new
   end
   
   def create
-    @Barrios = Barrios.new(post_params)
-    if @Barrios.save
+    @barrio = Barrios.new(post_params)
+    if @barrio.save
         flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@Barrios)
+        redirect_to post_path(@barrio)
     else
         render 'new'
     end
   end
   
   def show
-    @Barrios = Barrios.find(params[:id])
+    @barrio = Barrios.find(params[:id])
   end
   
   private

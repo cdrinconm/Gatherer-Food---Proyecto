@@ -4,7 +4,31 @@
     </head>
     <body>
     <h1>Ingresa</h1>
-    <%= link_to 'home', root_path %>
-    <%= link_to 'newpost', posts_new_path %>
+    
+    <header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 offset-md-4">
+					<h1>Ingresar</h1>
+					<p>
+                        <%= f.label :Usuario %><br/>
+                        <%= f.text_field :user %>
+                    </p>
+                    <p>
+                        <%= f.label :Contraseña %><br/>
+                        <%= f.text_field :password %>
+                    </p>
+                    <p>
+                        <%= f.label :Recordarme %><br/>
+                        <%= f.label :¿Olvidaste tu contraseña? %><br/>
+                        <%= f.label :Crear cuenta %><br/>
+                    </p>					
+				</div>
+			</div>
+		</div>		
+	</header>
+	<br>
+	<br>
+	<%= link_to 'Home', root_path %>
     </body>
 </HTML>

@@ -1,15 +1,16 @@
 <h1>Agregar un nuevo barrio</h1>
-<!--
-<% if @post.errors.any? %>
-    <% @post.errors.full_messages.each do |mensaje| %>
+
+<% if @barrio.errors.any? %>
+    <% @barrios.errors.full_messages.each do |mensaje| %>
         <ul>
             <li><%= mensaje %></li>
         </ul>
     <%end%>
 <%end%>
--->
+
 <h1>Llene por favor la tabla</h1>
-<%= form_for @post do |f| %>
+
+<%= form_for @barrio do |f| %>
     <p>
         <%= f.label :Nombre %><br/>
         <%= f.text_field :nombre %>
@@ -27,7 +28,7 @@
         <%= f.text_field :telefonoRepresentante %>
     </p>
     <p>
-        <%= f.label :Direccion Url %><br/>
+        <%= f.label :Direccion_Url %><br/>
         <%= f.text_field :direccionUrl %>
     </p>
     <p>
@@ -37,4 +38,4 @@
     <p>
         <%= f.submit %>
     </p>    
-<% end %>
+<%end%>

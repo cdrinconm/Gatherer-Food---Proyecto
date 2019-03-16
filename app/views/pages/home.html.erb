@@ -4,7 +4,40 @@
     </head>
 <body>
     <h1>Bienvenidos!</h1>
-    <%= link_to 'login', pages_login_path %>
-    <h1>Funciona!</h1>
+    <br>
+	<br>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h1>Gatherer Food!</h1>
+				</div>
+			</div>
+		</div>		
+	</header>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<p>
+					Bienvenidos! Esta es una aplicacion creada con el fin de... para que tu.... con las empresas que manejan comida y muchas veces botan los desperdicios. Aca tenemos un sistema para recolectarlos, almacenarlos y distribuirlos!
+				</p>
+			</div>
+			<div class="col-md-4">
+				<div class="container">
+				    <h1>Iniciar Sesion / Registrarse</h1>
+				    <%= link_to 'Iniciar_Sesion', pages_login_path %>
+				    <%= link_to 'Registrarse', pages_registrarse_path %>
+				    <h1>Ir a las Tablas</h1>
+                    <%= link_to 'Barrios', barrios_new_path %>
+                    <%= link_to 'Organizaciones', organizaciones_new_path %>
+                    <%= link_to 'Recolectas_Pendientes', recolectaspendientes_new_path %>
+                    <%= link_to 'Recolectas_Realizadas', recolectasrealizadas_new_path %>
+                    <%= link_to 'Representantes', representantes_new_path %>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </HTML>

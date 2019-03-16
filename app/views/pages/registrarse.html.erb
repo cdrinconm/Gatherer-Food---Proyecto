@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>   
+    </head>
+    <body>
+    <h1>Ingresa</h1>
+    
+    <header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 offset-md-4">
+					<h1>Registrate!</h1>
+					<br>
+					<p>
+                        <%= f.label :Nombre %><br/>
+                        <%= f.text_field :nombre %>
+                    </p>
+                    <p>
+                        <%= f.label :Apellido %><br/>
+                        <%= f.text_field :apellido %>
+                    </p>
+                    <p>
+                        <%= f.label :Edad %><br/>
+                        <%= f.text_field :edad %>
+                    </p>
+                    <p>
+                        <%= f.label :Correo %><br/>
+                        <%= f.text_field :correo %>
+                    </p>
+                    <p>
+                        <%= f.label :Ocupacion %><br/>
+                        <%= f.text_field :ocupacion %>
+                    </p>
+                    <p>
+                        <%= f.label :Institucion %><br/>
+                        <%= f.text_field :institucion %>
+                    </p>
+                    <p>
+                        <%= f.label :Crear cuenta %><br/>                        
+                    </p>
+					
+				</div>
+			</div>
+		</div>		
+	</header>
+	<br>
+	<br>
+	<%= link_to 'Home', root_path %>
+    </body>
+</HTML>

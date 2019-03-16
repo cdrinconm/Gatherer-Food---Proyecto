@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20190309160121) do
     t.datetime "updated_at"
   end
 
-  create_table "recolectas_pendientes", force: :cascade do |t|
+  create_table "recolectaspendientes", force: :cascade do |t|
     t.string   "organizacion"
     t.datetime "fecha"
     t.string   "direccion"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20190309160121) do
     t.datetime "updated_at"
   end
 
-  create_table "recolectas_realizadas", force: :cascade do |t|
+  create_table "recolectasrealizadas", force: :cascade do |t|
     t.string   "organizacion"
     t.datetime "fecha"
     t.string   "direccion"

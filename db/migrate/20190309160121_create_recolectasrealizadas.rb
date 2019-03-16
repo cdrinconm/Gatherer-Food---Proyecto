@@ -1,4 +1,4 @@
-class CreateRecolectasealizadas < ActiveRecord::Migration[5.0]
+class CreateRecolectasrealizadas < ActiveRecord::Migration[5.0]
   def change
     create_table :recolectasrealizadas do |t|
       t.string :organizacion
