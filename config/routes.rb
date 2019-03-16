@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #root
   root 'pages#home'
   #barrios
+  
   get 'barrios/new', to: "barrios#new"
   get 'barrios/show', to: "barrios#show"
   #organizaciones
