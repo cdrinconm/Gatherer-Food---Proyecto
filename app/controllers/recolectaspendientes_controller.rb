@@ -29,6 +29,13 @@ class RecolectaspendientesController < ApplicationController
     @recolectaspendiente = Recolectaspendiente.all
   end
   
+  def destroy
+    @recolectaspendiente = Recolectaspendiente.find(params[:id])
+    @recolectaspendiente.destroy
+    flash[:notice] = "La recolecta pendiente ha sido eliminada satisfactoriamente"
+    redirect_to recolectaspendientes_path
+  end
+  
   def show
     @recolectaspendiente = Recolectaspendiente.find(params[:id])
   end

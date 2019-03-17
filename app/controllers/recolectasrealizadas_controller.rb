@@ -29,6 +29,13 @@ class RecolectasrealizadasController < ApplicationController
     @recolectasrealizada = Recolectasrealizada.all
   end
   
+  def destroy
+    @recolectasrealizada = Recolectasrealizada.find(params[:id])
+    @recolectasrealizada.destroy
+    flash[:notice] = "La recolecta realizada ha sido eliminada satisfactoriamente"
+    redirect_to recolectasrealizadas_path
+  end
+  
   def show
     @recolectasrealizada = Recolectasrealizada.find(params[:id])
   end

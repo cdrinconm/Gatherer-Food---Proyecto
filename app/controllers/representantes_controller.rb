@@ -30,6 +30,13 @@ class RepresentantesController < ApplicationController
     @representante = Representante.all
   end
   
+  def destroy
+    @representante = Representante.find(params[:id])
+    @representante.destroy
+    flash[:notice] = "El representante ha sido eliminado satisfactoriamente"
+    redirect_to representantes_path
+  end
+  
   def show
     @representante = Representante.find(params[:id])
   end

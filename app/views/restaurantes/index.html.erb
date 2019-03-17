@@ -17,9 +17,10 @@
         <td><%= item.telefonoRepresentante %></td>
         <td><%= item.direccionUrl %></td>
         <td><%= item.descripcion %></td>
-        <td><%= link_to "Editar Post", edit_restaurante_path(item.id) %></td>
-        <td><%= link_to "Mostrar Post", restaurante_path(item) %></td>
+        <td><%= link_to "Editar", edit_restaurante_path(item.id) %></td>
+        <td><%= link_to "Mostrar", restaurante_path(item) %></td>
+        <td><%= link_to "Eliminar", restaurante_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?" } %></td>
     </tr>
     <%end%>
-    <%= link_to 'Crear nuevo post', new_post_path %>
+    <%= link_to 'Añadir nuevo restaurante', new_restaurante_path %>
 </table>

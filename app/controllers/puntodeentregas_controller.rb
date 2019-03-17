@@ -29,6 +29,13 @@ class PuntodeentregasController < ApplicationController
     @puntodeentrega = Puntodeentrega.all
   end
   
+  def destroy
+    @puntodeentrega = Puntodeentrega.find(params[:id])
+    @puntodeentrega.destroy
+    flash[:notice] = "El punto de entrega ha sido eliminado satisfactoriamente"
+    redirect_to puntodeentregas_path
+  end
+  
   def show
     @puntodeentrega= Puntodeentrega.find(params[:id])
   end

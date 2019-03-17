@@ -11,8 +11,10 @@
         <td><%= item.nombre %></td>
         <td><%= item.habitantesBeneficiados %></td>
         <td><%= item.ubicacion %></td>
-        <td><%= link_to "Editar Post", edit_puntodeentrega_path(item.id) %></td>
-        <td><%= link_to "Mostrar Post", puntodeentrega_path(item) %></td>
+        <td><%= link_to "Editar", edit_puntodeentrega_path(item.id) %></td>
+        <td><%= link_to "Mostrar", puntodeentrega_path(item) %></td>
+        <td><%= link_to "Eliminar", puntodeentrega_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?" } %></td>
     </tr>
     <%end%>
+    <%= link_to 'Añadir nuevo punto de entrega', new_puntodeentrega_path %>
 </table>

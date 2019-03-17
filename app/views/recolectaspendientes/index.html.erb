@@ -13,8 +13,10 @@
         <td><%= item.fecha %></td>
         <td><%= item.direccion %></td>
         <td><%= item.cantidadKilos %></td>
-        <td><%= link_to "Editar Post", edit_recolectaspendiente_path(item.id) %></td>
-        <td><%= link_to "Mostrar Post", recolectaspendiente_path(item) %></td>
+        <td><%= link_to "Editar", edit_recolectaspendiente_path(item.id) %></td>
+        <td><%= link_to "Mostrar", recolectaspendiente_path(item) %></td>
+        <td><%= link_to "Eliminar", recolectaspendiente_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?" } %></td>
     </tr>
     <%end%>
+    <%= link_to 'Añadir nueva recolecta pendiente', new_recolectaspendiente_path %>
 </table>

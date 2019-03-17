@@ -8,3 +8,5 @@
 <p>
     Ubicacion: <%= @puntodeentrega.ubicacion %>
 </p>
+<%= link_to 'Volver al indice de puntos de entregas', puntodeentregas_path %>
+<%= link_to 'Editar punto de entrega', edit_puntodeentrega_path(@puntodeentrega.id) %>

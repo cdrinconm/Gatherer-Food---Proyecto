@@ -29,6 +29,12 @@ class RecolectoresController < ApplicationController
     @recolectore = Recolectore.all
   end
   
+  def destroy
+    @recolectore = Recolectore.find(params[:id])
+    @recolectore.destroy
+    flash[:notice] = "El recolector ha sido eliminado satisfactoriamente"
+    redirect_to recolectores_path
+  end  
   
   def show
     @recolectore = Recolectore.find(params[:id])
