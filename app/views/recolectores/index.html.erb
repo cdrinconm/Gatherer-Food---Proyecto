@@ -1,0 +1,20 @@
+<h1>Recolectores</h1>
+</br>
+<table>
+    <tr>
+        <th> Nombre </th>
+        <th> Apellido</th>
+        <th> Telefono </th>
+        <th> Correo</th>
+    </tr>
+    <% @recolectore.each do |item| %>
+    <tr>
+        <td><%= item.nombre %></td>
+        <td><%= item.apellido %></td>
+        <td><%= item.telefono %></td>
+        <td><%= item.correo %></td>
+        <td><%= link_to "Editar Post", edit_recolectore_path(item.id) %></td>
+        <td><%= link_to "Mostrar Post", recolectore_path(item) %></td>
+    </tr>
+    <%end%>
+</table>

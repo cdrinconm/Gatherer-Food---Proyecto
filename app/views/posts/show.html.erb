@@ -5,3 +5,5 @@
 <p>
     Contenido: <%= @post.descripcion %>
 </p>
+<%= link_to 'Volver al indice de posts', posts_path %>
+<%= link_to 'Editar post', edit_post_path(@post.id) %>

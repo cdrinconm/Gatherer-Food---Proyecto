@@ -1,0 +1,18 @@
+<h1>Puntos de Entrega</h1>
+</br>
+<table>
+    <tr>
+        <th> Nombre </th>
+        <th> Habitantes Beneficiados</th>
+        <th> Ubicacion</th>
+    </tr>
+    <% @puntodeentrega.each do |item| %>
+    <tr>
+        <td><%= item.nombre %></td>
+        <td><%= item.habitantesBeneficiados %></td>
+        <td><%= item.ubicacion %></td>
+        <td><%= link_to "Editar Post", edit_puntodeentrega_path(item.id) %></td>
+        <td><%= link_to "Mostrar Post", puntodeentrega_path(item) %></td>
+    </tr>
+    <%end%>
+</table>

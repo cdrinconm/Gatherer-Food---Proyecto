@@ -1,0 +1,20 @@
+<h1>Recolectas Pendientes</h1>
+</br>
+<table>
+    <tr>
+        <th> Organizacion </th>
+        <th> Fecha</th>
+        <th> Direccion </th>
+        <th> Cantidad en Kilos</th>
+    </tr>
+    <% @recolectaspendiente.each do |item| %>
+    <tr>
+        <td><%= item.organizacion %></td>
+        <td><%= item.fecha %></td>
+        <td><%= item.direccion %></td>
+        <td><%= item.cantidadKilos %></td>
+        <td><%= link_to "Editar Post", edit_recolectaspendiente_path(item.id) %></td>
+        <td><%= link_to "Mostrar Post", recolectaspendiente_path(item) %></td>
+    </tr>
+    <%end%>
+</table>

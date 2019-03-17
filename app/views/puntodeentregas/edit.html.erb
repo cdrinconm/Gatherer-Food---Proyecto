@@ -1,0 +1,29 @@
+<h1>Editar Punto de Entrega</h1>
+
+<% if @puntodeentrega.errors.any? %>
+    <% @puntodeentrega.errors.full_messages.each do |mensaje| %>
+        <ul>
+            <li><%= mensaje %></li>
+        </ul>
+    <%end%>
+<%end%>
+</br>
+<h4>Llene por favor la siguiente tabla</h4>
+
+<%= form_for @puntodeentrega do |f| %>
+    <p>
+        <%= f.label :Nombre %><br/>
+        <%= f.text_field :nombre %>
+    </p>    
+    <p>
+        <%= f.label :Habitantes_Beneficiados %><br/>
+        <%= f.text_field :habitantesBeneficiados %>
+    </p>
+    <p>
+        <%= f.label :Ubicacion %><br/>
+        <%= f.text_field :ubicacion %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>    
+<%end%>

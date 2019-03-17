@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   #representantes
   get 'representantes/new', to: "representantes#new"
   get 'representantes/show', to: "representantes#show"
+  #recolectores
+  get 'recolectores/new', to: "recolectores#new"
+  get 'recolectores/show', to: "recolectores#show"
   
   resources :posts
   resources :restaurantes
@@ -32,4 +35,5 @@ Rails.application.routes.draw do
   resources :representantes
   resources :recolectasrealizadas
   resources :recolectaspendientes
+  resources :recolectores
 end

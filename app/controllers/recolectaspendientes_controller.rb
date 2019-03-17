@@ -12,6 +12,23 @@ class RecolectaspendientesController < ApplicationController
     end
   end
   
+  def edit
+    @recolectaspendiente = Recolectaspendiente.find(params[:id])
+  end
+  
+  def update
+    @recolectaspendiente = Recolectaspendiente.find(params[:id])
+    if @recolectaspendiente.update(post_params)
+        redirect_to recolectaspendiente_path(@recolectaspendiente)
+    else
+        render 'edit'
+    end
+  end
+  
+  def index
+    @recolectaspendiente = Recolectaspendiente.all
+  end
+  
   def show
     @recolectaspendiente = Recolectaspendiente.find(params[:id])
   end

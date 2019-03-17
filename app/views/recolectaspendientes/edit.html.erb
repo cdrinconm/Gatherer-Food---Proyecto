@@ -1,6 +1,6 @@
-<h1>Añadir recolecta realizada</h1>
-<% if @recolectasrealizada.errors.any? %>
-    <% @recolectasrealizada.errors.full_messages.each do |mensaje| %>
+<h1>Editar Donacion</h1>
+<% if @recolectaspendiente.errors.any? %>
+    <% @recolectaspendiente.errors.full_messages.each do |mensaje| %>
         <ul>
             <li><%= mensaje %></li>
         </ul>
@@ -8,9 +8,9 @@
 <%end%>
 </br>
 <h4>Llene por favor la tabla</h4>
-<%= form_for @recolectasrealizada do |f| %>
+<%= form_for @recolectaspendiente do |f| %>
     <p>
-        <%= f.label :Organizacion_que_donó %><br/>
+        <%= f.label :Organizacion_a_la_que_representa %><br/>
         <%= f.text_field :organizacion %>
     </p>
     <p>

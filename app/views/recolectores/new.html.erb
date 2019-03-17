@@ -1,0 +1,33 @@
+<h1>Añadir nuevo recolector</h1>
+
+<% if @recolectore.errors.any? %>
+    <% @recolectore.errors.full_messages.each do |mensaje| %>
+        <ul>
+            <li><%= mensaje %></li>
+        </ul>
+    <%end%>
+<%end%>
+
+</br>
+<h4>Llene por favor la siguiente tabla</h4>
+<%= form_for @recolectore do |f| %>
+    <p>
+        <%= f.label :Nombre %><br/>
+        <%= f.text_field :nombre %>
+    </p>
+    <p>
+        <%= f.label :Apellido %><br/>
+        <%= f.text_field :apellido %>
+    </p>
+    <p>
+        <%= f.label :Telefono %><br/>
+        <%= f.text_field :telefono %>
+    </p>
+    <p>
+        <%= f.label :Correo %><br/>
+        <%= f.text_field :correo %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>    
+<% end %>

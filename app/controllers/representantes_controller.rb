@@ -11,6 +11,24 @@ class RepresentantesController < ApplicationController
         render 'new'
     end
   end
+ 
+  
+  def edit
+    @representante = Representante.find(params[:id])
+  end
+  
+  def update
+    @representante = Representante.find(params[:id])
+    if @representante.update(post_params)
+        redirect_to representante_path(@representante)
+    else
+        render 'edit'
+    end
+  end
+  
+  def index
+    @representante = Representante.all
+  end
   
   def show
     @representante = Representante.find(params[:id])

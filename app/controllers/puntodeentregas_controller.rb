@@ -12,6 +12,23 @@ class PuntodeentregasController < ApplicationController
     end
   end
   
+  def edit
+    @puntodeentrega = Puntodeentrega.find(params[:id])
+  end
+  
+  def update
+    @puntodeentrega = Puntodeentrega.find(params[:id])
+    if @puntodeentrega.update(post_params)
+        redirect_to puntodeentrega_path(@puntodeentrega)
+    else
+        render 'edit'
+    end
+  end
+  
+  def index
+    @puntodeentrega = Puntodeentrega.all
+  end
+  
   def show
     @puntodeentrega= Puntodeentrega.find(params[:id])
   end

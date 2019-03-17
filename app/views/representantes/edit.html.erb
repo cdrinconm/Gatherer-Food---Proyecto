@@ -1,0 +1,36 @@
+<h1>Editar Representante</h1>
+
+<% if @representante.errors.any? %>
+    <% @representante.errors.full_messages.each do |mensaje| %>
+        <ul>
+            <li><%= mensaje %></li>
+        </ul>
+    <%end%>
+<%end%>
+</br>
+<h4>Llene por favor la tabla</h4>
+<%= form_for @representante do |f| %>
+    <p>
+        <%= f.label :Nombre %><br/>
+        <%= f.text_field :nombre %>
+    </p>
+    <p>
+        <%= f.label :Apellido %><br/>
+        <%= f.text_field :apellido %>
+    </p>
+    <p>
+        <%= f.label :Edad %><br/>
+        <%= f.text_field :edad %>
+    </p>
+    <p>
+        <%= f.label :Telefono %><br/>
+        <%= f.text_field :telefono %>
+    </p>
+    <p>
+        <%= f.label :Organizacion %><br/>
+        <%= f.text_field :organizacion %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>    
+<% end %>

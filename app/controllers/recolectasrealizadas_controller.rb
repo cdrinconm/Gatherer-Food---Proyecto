@@ -12,6 +12,23 @@ class RecolectasrealizadasController < ApplicationController
     end
   end
   
+  def edit
+    @recolectasrealizada = Recolectasrealizada.find(params[:id])
+  end
+  
+  def update
+    @recolectasrealizada = Recolectasrealizada.find(params[:id])
+    if @recolectasrealizada.update(post_params)
+        redirect_to recolectasrealizada_path(@recolectasrealizada)
+    else
+        render 'edit'
+    end
+  end
+  
+  def index
+    @recolectasrealizada = Recolectasrealizada.all
+  end
+  
   def show
     @recolectasrealizada = Recolectasrealizada.find(params[:id])
   end
