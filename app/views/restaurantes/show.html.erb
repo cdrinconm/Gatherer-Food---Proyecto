@@ -18,5 +18,5 @@
 <p>
     Descripcion: <%= @restaurante.descripcion %>
 </p>
-<%= link_to 'Volver al indice de restaurantes', restaurantes_path %>
-<%= link_to 'Editar restaurante', edit_restaurante_path(@restaurante.id) %>
+<%= link_to 'Volver al indice de restaurantes', restaurantes_path, class: "btn btn-xs btn-success" %>
+<%= link_to 'Editar restaurante', edit_restaurante_path(@restaurante.id), class: "btn btn-xs btn-primary" %>

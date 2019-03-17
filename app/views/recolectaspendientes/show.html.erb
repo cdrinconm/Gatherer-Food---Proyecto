@@ -11,5 +11,5 @@
 <p>
     Cantidad en Kilos: <%= @recolectaspendiente.cantidadKilos %>
 </p>
-<%= link_to 'Volver al indice de recolectas pendientes', recolectaspendientes_path %>
-<%= link_to 'Editar recolecta pendiente', edit_recolectaspendiente_path(@recolectaspendiente.id) %>
+<%= link_to 'Volver al indice de recolectas pendientes', recolectaspendientes_path, class: "btn btn-xs btn-success" %>
+<%= link_to 'Editar recolecta pendiente', edit_recolectaspendiente_path(@recolectaspendiente.id), class: "btn btn-xs btn-primary" %>

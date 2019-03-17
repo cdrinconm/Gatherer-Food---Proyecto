@@ -13,9 +13,9 @@
         <td><%= item.fecha %></td>
         <td><%= item.direccion %></td>
         <td><%= item.cantidadKilos %></td>
-        <td><%= link_to "Editar", edit_recolectasrealizada_path(item.id) %></td>
-        <td><%= link_to "Mostrar", recolectasrealizada_path(item) %></td>
-        <td><%= link_to "Eliminar", recolectasrealizada_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?" } %></td>
+        <td><%= link_to "Editar", edit_recolectasrealizada_path(item.id), class: "btn btn-xs btn-primary" %></td>
+        <td><%= link_to "Mostrar", recolectasrealizada_path(item), class: "btn btn-xs btn-success" %></td>
+        <td><%= link_to "Eliminar", recolectasrealizada_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"} %></td>
     </tr>
     <%end%>
     <%= link_to 'Añadir nueva recolecta realizada', new_recolectasrealizada_path %>

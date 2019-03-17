@@ -17,9 +17,9 @@
         <td><%= item.telefonoRepresentante %></td>
         <td><%= item.direccionUrl %></td>
         <td><%= item.descripcion %></td>
-        <td><%= link_to "Editar", edit_restaurante_path(item.id) %></td>
-        <td><%= link_to "Mostrar", restaurante_path(item) %></td>
-        <td><%= link_to "Eliminar", restaurante_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?" } %></td>
+        <td><%= link_to "Editar", edit_restaurante_path(item.id), class: "btn btn-xs btn-primary" %></td>
+        <td><%= link_to "Mostrar", restaurante_path(item), class: "btn btn-xs btn-success" %></td>
+        <td><%= link_to "Eliminar", restaurante_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"}, class: "btn btn-xs btn-danger" %></td>
     </tr>
     <%end%>
     <%= link_to 'Añadir nuevo restaurante', new_restaurante_path %>

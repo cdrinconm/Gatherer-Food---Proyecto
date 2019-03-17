@@ -20,7 +20,7 @@
         <%= f.text_field :correo, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
-        <%= f.submit %>
+        <%= f.submit class: "btn btn-primary btn-lg" %>
     </p>
-    <%= link_to 'Volver al indice de recolectores', recolectores_path %>
+    <%= link_to 'Volver al indice de recolectores', recolectores_path, class: "btn btn-xs btn-success" %>
 <% end %>

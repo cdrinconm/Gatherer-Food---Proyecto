@@ -13,9 +13,9 @@
         <td><%= item.apellido %></td>
         <td><%= item.telefono %></td>
         <td><%= item.correo %></td>
-        <td><%= link_to "Editar", edit_recolectore_path(item.id) %></td>
-        <td><%= link_to "Mostrar", recolectore_path(item) %></td>
-        <td><%= link_to "Eliminar", recolectore_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?" } %></td>
+        <td><%= link_to "Editar", edit_recolectore_path(item.id), class: "btn btn-xs btn-primary" %></td>
+        <td><%= link_to "Mostrar", recolectore_path(item), class: "btn btn-xs btn-success" %></td>
+        <td><%= link_to "Eliminar", recolectore_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"}, class: "btn btn-xs btn-danger" %></td>
     </tr>
     <%end%>
     <%= link_to 'Añadir nuevo recolector', new_recolectore_path %>

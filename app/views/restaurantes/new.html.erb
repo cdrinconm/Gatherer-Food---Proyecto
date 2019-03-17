@@ -28,7 +28,7 @@
         <%= f.text_area :descripcion, class: "form-control", rows: 10, placeholder: "Agregar info", autofocus: true %>  
     </p>
     <p>
-        <%= f.submit %>
+        <%= f.submit class: "btn btn-primary btn-lg" %>
     </p>
-    <%= link_to 'Volver al indice de restaurantes', restaurantes_path %>
+    <%= link_to 'Volver al indice de restaurantes', restaurantes_path, class: "btn btn-xs btn-success" %>
 <% end %>

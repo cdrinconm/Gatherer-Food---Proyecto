@@ -14,5 +14,5 @@
 <p>
     Organizacion: <%= @representante.organizacion %>
 </p>
-<%= link_to 'Volver al indice de representantes', representantes_path %>
-<%= link_to 'Editar representante', edit_representante_path(@representante.id) %>
+<%= link_to 'Volver al indice de representantes', representantes_path, class: "btn btn-xs btn-success" %>
+<%= link_to 'Editar representante', edit_representante_path(@representante.id), class: "btn btn-xs btn-primary" %>

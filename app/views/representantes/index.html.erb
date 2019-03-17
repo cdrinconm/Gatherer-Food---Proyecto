@@ -15,9 +15,9 @@
         <td><%= item.edad %></td>
         <td><%= item.telefono %></td>
         <td><%= item.organizacion %></td>
-        <td><%= link_to "Editar", edit_representante_path(item.id) %></td>
-        <td><%= link_to "Mostrar", representante_path(item) %></td>
-        <td><%= link_to "Eliminar", representante_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?" } %></td>
+        <td><%= link_to "Editar", edit_representante_path(item.id), class: "btn btn-xs btn-primary" %></td>
+        <td><%= link_to "Mostrar", representante_path(item), class: "btn btn-xs btn-success" %></td>
+        <td><%= link_to "Eliminar", representante_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"}, class: "btn btn-xs btn-danger" %></td>
     </tr>
     <%end%>
     <%= link_to 'Añadir nuevo representante', new_representante_path %>

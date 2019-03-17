@@ -11,5 +11,5 @@
 <p>
     Correo: <%= @recolectore.correo %>
 </p>
-<%= link_to 'Volver al indice de recolectores', recolectores_path %>
-<%= link_to 'Editar recolector', edit_recolectore_path(@recolectore.id) %>
+<%= link_to 'Volver al indice de recolectores', recolectores_path, class: "btn btn-xs btn-success" %>
+<%= link_to 'Editar recolector', edit_recolectore_path(@recolectore.id), class: "btn btn-xs btn-primary" %>

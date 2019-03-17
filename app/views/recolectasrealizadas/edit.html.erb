@@ -20,7 +20,7 @@
         <%= f.text_field :cantidadKilos, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
-        <%= f.submit %>
+        <%= f.submit class: "btn btn-primary btn-lg" %>
     </p>
-    <%= link_to 'Volver al indice de recolectas realizadas', recolectasrealizadas_path %>
+    <%= link_to 'Volver al indice de recolectas realizadas', recolectasrealizadas_path, class: "btn btn-xs btn-success" %>
 <% end %>

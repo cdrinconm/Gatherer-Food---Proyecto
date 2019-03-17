@@ -29,6 +29,9 @@ Rails.application.routes.draw do
   #recolectores
   get 'recolectores/new', to: "recolectores#new"
   get 'recolectores/show', to: "recolectores#show"
+  #users
+  get 'users/new', to: "users#new"
+  get 'users/show', to: "users#show"
   
   resources :posts
   resources :restaurantes
@@ -37,4 +40,5 @@ Rails.application.routes.draw do
   resources :recolectasrealizadas
   resources :recolectaspendientes
   resources :recolectores
+  resources :users
 end
