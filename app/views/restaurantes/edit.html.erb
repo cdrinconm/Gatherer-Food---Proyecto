@@ -1,38 +1,31 @@
 <h1>Editar Restaurante</h1>
-
-<% if @restaurante.errors.any? %>
-    <% @restaurante.errors.full_messages.each do |mensaje| %>
-        <ul>
-            <li><%= mensaje %></li>
-        </ul>
-    <%end%>
-<%end%>
+<%= render "shared/errors", obj: @restaurante%>
 </br>
 <h4>Llene por favor la tabla</h4>
 <%= form_for @restaurante do |f| %>
     <p>
         <%= f.label :Nombre %><br/>
-        <%= f.text_field :nombre %>
+        <%= f.text_field :nombre, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Direccion %><br/>
-        <%= f.text_field :direccion %>
+        <%= f.text_field :direccion, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Representante %><br/>
-        <%= f.text_field :representante %>
+        <%= f.text_field :representante, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Telefono_de_Contacto %><br/>
-        <%= f.text_field :telefonoRepresentante %>
+        <%= f.text_field :telefonoRepresentante, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Pagina_Web %><br/>
-        <%= f.text_field :direccionUrl %>
+        <%= f.text_field :direccionUrl, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Descripcion %><br/>
-        <%= f.text_area :descripcion %>  
+        <%= f.text_area :descripcion, class: "form-control", rows: 10, placeholder: "Agregar info", autofocus: true %>  
     </p>
     <p>
         <%= f.submit %>

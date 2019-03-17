@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   #pages
   get 'pages/login', to: "pages#login"
   get 'pages/registrarse', to: "pages#registrarse"
+  get 'pages/about', to: "pages#about"
   #posts
   get 'posts/new', to: "posts#new"
   get 'posts/show', to: "posts#show"

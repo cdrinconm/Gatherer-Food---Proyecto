@@ -1,29 +1,23 @@
 <h1>Editar Donacion</h1>
-<% if @recolectaspendiente.errors.any? %>
-    <% @recolectaspendiente.errors.full_messages.each do |mensaje| %>
-        <ul>
-            <li><%= mensaje %></li>
-        </ul>
-    <%end%>
-<%end%>
+<%= render "shared/errors", obj: @recolectaspendiente%>
 </br>
 <h4>Llene por favor la tabla</h4>
 <%= form_for @recolectaspendiente do |f| %>
     <p>
         <%= f.label :Organizacion_a_la_que_representa %><br/>
-        <%= f.text_field :organizacion %>
+        <%= f.text_field :organizacion, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Fecha_de_entrega%><br/>
-        <%= f.text_field :fecha %>
+        <%= f.text_field :fecha, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Direccion_de_la_Donacion %><br/>
-        <%= f.text_field :direccion %>
+        <%= f.text_field :direccion, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Cantidad_en_Kilos %><br/>
-        <%= f.text_field :cantidadKilos %>
+        <%= f.text_field :cantidadKilos, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.submit %>

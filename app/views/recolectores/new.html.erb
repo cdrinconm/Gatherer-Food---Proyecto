@@ -1,31 +1,23 @@
 <h1>Añadir nuevo recolector</h1>
-
-<% if @recolectore.errors.any? %>
-    <% @recolectore.errors.full_messages.each do |mensaje| %>
-        <ul>
-            <li><%= mensaje %></li>
-        </ul>
-    <%end%>
-<%end%>
-
+<%= render "shared/errors", obj: @recolectores%>
 </br>
 <h4>Llene por favor la siguiente tabla</h4>
 <%= form_for @recolectore do |f| %>
     <p>
         <%= f.label :Nombre %><br/>
-        <%= f.text_field :nombre %>
+        <%= f.text_field :nombre, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Apellido %><br/>
-        <%= f.text_field :apellido %>
+        <%= f.text_field :apellido, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Telefono %><br/>
-        <%= f.text_field :telefono %>
+        <%= f.text_field :telefono, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Correo %><br/>
-        <%= f.text_field :correo %>
+        <%= f.text_field :correo, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.submit %>

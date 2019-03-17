@@ -1,0 +1,7 @@
+<% if obj.errors.any? %>
+    <% obj.errors.full_messages.each do |mensaje| %>
+        <ul>
+            <li><%= mensaje %></li>
+        </ul>
+    <%end%>
+<%end%>

@@ -1,27 +1,20 @@
 <h1>Editar Punto de Entrega</h1>
-
-<% if @puntodeentrega.errors.any? %>
-    <% @puntodeentrega.errors.full_messages.each do |mensaje| %>
-        <ul>
-            <li><%= mensaje %></li>
-        </ul>
-    <%end%>
-<%end%>
+<%= render "shared/errors", obj: @puntodeentrega%>
 </br>
 <h4>Llene por favor la siguiente tabla</h4>
 
 <%= form_for @puntodeentrega do |f| %>
     <p>
         <%= f.label :Nombre %><br/>
-        <%= f.text_field :nombre %>
+        <%= f.text_field :nombre, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>    
     <p>
         <%= f.label :Habitantes_Beneficiados %><br/>
-        <%= f.text_field :habitantesBeneficiados %>
+        <%= f.text_field :habitantesBeneficiados, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.label :Ubicacion %><br/>
-        <%= f.text_field :ubicacion %>
+        <%= f.text_field :ubicacion, class: "form-control", placeholder: "Agregar info", autofocus: true %>
     </p>
     <p>
         <%= f.submit %>

@@ -1,31 +1,7 @@
-<!DOCTYPE HTML>
-<HTML>
-    <head>   
-    </head>
-<body>
-    
-    <br>
-	<br>
-	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 offset-md-4">
-					<h1>Gatherer Food!</h1>
-				</div>
-			</div>
-		</div>		
-	</header>
-	<br>
-	<br>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8">
-				<p>
-					Bienvenidos! Esta es una aplicacion creada con el fin de... para que tu.... con las empresas que manejan comida y muchas veces botan los desperdicios. Aca tenemos un sistema para recolectarlos, almacenarlos y distribuirlos!
-				</p>
-				<h1><%= link_to 'Iniciar Sesion', pages_login_path %> / <%= link_to 'Registrarse', pages_registrarse_path %></h1>                
-			</div>			
-		</div>
-	</div>
-</body>
-</HTML>
+<div class="center jumbotron">
+    <h1>Gatherer Food!</h1>
+	<p>Esta es una aplicacion creada con el fin de... para que tu.... con las empresas que manejan comida y muchas veces botan los desperdicios. Aca tenemos un sistema para recolectarlos, almacenarlos y distribuirlos!</p>
+	<p><%= link_to 'Iniciar Sesion', pages_login_path, class: "btn btn-primary btl-lg" %> </p>
+	<p><%= link_to 'Registrarse', pages_registrarse_path, class: "btn btn-primary btl-lg" %></p>	
+</div>
+

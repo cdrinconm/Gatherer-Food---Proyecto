@@ -1,12 +1,5 @@
 <h1>Edicion de Post</h1>
-
-<% if @post.errors.any? %>
-    <% @post.errors.full_messages.each do |mensaje| %>
-        <ul>
-            <li><%= mensaje %></li>
-        </ul>
-    <%end%>
-<%end%>
+<%= render "shared/errors", obj: @post%>
 <h1>Hola</h1>
 <%= form_for @post do |f| %>
     <p>

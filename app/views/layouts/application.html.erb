@@ -12,10 +12,12 @@
     <%= render "layouts/messages" %>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <%= yield %>                
+            <div class="col-md-11 offset-md-1">
+                <%= yield %>
+                <%= render "layouts/footer" %>
             </div>
         </div>
     </div>
+    
   </body>
 </html>

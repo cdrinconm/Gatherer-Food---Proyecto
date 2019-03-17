@@ -1,36 +1,28 @@
-<!DOCTYPE HTML>
-<HTML>
-    <head>   
-    </head>
-    <body>
-    <h1>Ingresa</h1>
-    
-    <header>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 offset-md-4">
-					<h1>Ingresar</h1>
-					<%= form_for @post do |f| %>
-					<p>
-                        <%= f.label :Usuario %><br/>
-                        <%= f.text_field :titulo %>
-                    </p>
-                    <p>
-                        <%= f.label :Contraseña %><br/>
-                        <%= f.text_field :password %>
-                    </p>
-                    <p>
-                        <%= f.label :Recordarme %><br/>
-                        <%= f.label :¿Olvidaste_tu_contraseña? %><br/>
-                        <%= f.label :Registrate %><br/>
-                    </p>
-                    <%end%>
-				</div>
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 offset-md-4">
+				<h1>Ingresar</h1>
+				<%= form_for @post do |f| %>
+				<p>
+                    <%= f.label :Usuario %><br/>
+                    <%= f.text_field :titulo %>
+                </p>
+                <p>
+                    <%= f.label :Contraseña %><br/>
+                    <%= f.text_field :password %>
+                </p>
+                <p>
+                    <%= f.label :Recordarme %><br/>
+                    <%= f.label :¿Olvidaste_tu_contraseña? %><br/>
+                    <%= f.label :Registrate %><br/>
+                </p>
+                <%end%>
 			</div>
-		</div>		
-	</header>
-	<br>
-	<br>
-	<%= link_to 'Home', root_path %>
-    </body>
-</HTML>
+		</div>
+	</div>		
+</header>
+<br>
+<br>
+<%= link_to 'Home', root_path %>
+
