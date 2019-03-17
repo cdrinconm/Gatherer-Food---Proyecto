@@ -1,10 +1,10 @@
-<h1>Puntos de Entrega</h1>
+<h1>Recolectas Pendientes</h1>
 </br>
 <table>
     <tr>
         <th> Nombre </th>
         <th> Habitantes Beneficiados</th>
-        <th> Ubicacion</th>
+        <th> Ubicacion </th>
     </tr>
     <% @puntodeentrega.each do |item| %>
     <tr>
@@ -16,5 +16,5 @@
         <td><%= link_to "Eliminar", puntodeentrega_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"}, class: "btn btn-xs btn-danger" %></td>
     </tr>
     <%end%>
-    <%= link_to 'Añadir nuevo punto de entrega', new_puntodeentrega_path, class: "btn btn-xs btn-success" %>
+    <%= link_to 'Añadir nueva punto de entrega', new_puntodeentrega_path, class: "btn btn-xs btn-success" %>
 </table>
