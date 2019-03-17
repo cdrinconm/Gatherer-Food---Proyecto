@@ -20,5 +20,5 @@
         <td><%= link_to "Eliminar", representante_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"}, class: "btn btn-xs btn-danger" %></td>
     </tr>
     <%end%>
-    <%= link_to 'Añadir nuevo representante', new_representante_path %>
+    <%= link_to 'Añadir nuevo representante', new_representante_path, class: "btn btn-xs btn-success" %>
 </table>

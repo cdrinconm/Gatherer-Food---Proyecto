@@ -22,5 +22,5 @@
         <td><%= link_to "Eliminar", restaurante_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"}, class: "btn btn-xs btn-danger" %></td>
     </tr>
     <%end%>
-    <%= link_to 'Añadir nuevo restaurante', new_restaurante_path %>
+    <%= link_to 'Añadir nuevo restaurante', new_restaurante_path, class: "btn btn-xs btn-success" %>
 </table>

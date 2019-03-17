@@ -18,5 +18,5 @@
         <td><%= link_to "Eliminar", recolectaspendiente_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"}, class: "btn btn-xs btn-danger" %></td>
     </tr>
     <%end%>
-    <%= link_to 'Añadir nueva recolecta pendiente', new_recolectaspendiente_path %>
+    <%= link_to 'Añadir nueva recolecta pendiente', new_recolectaspendiente_path, class: "btn btn-xs btn-success" %>
 </table>

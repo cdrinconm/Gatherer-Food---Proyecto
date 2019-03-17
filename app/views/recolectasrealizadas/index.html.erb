@@ -18,5 +18,5 @@
         <td><%= link_to "Eliminar", recolectasrealizada_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"} %></td>
     </tr>
     <%end%>
-    <%= link_to 'Añadir nueva recolecta realizada', new_recolectasrealizada_path %>
+    <%= link_to 'Añadir nueva recolecta realizada', new_recolectasrealizada_path, class: "btn btn-xs btn-success" %>
 </table>
