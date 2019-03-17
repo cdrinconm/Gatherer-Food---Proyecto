@@ -10,30 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190309160121) do
-
-  create_table "barrios", force: :cascade do |t|
-    t.string   "nombre"
-    t.decimal  "habitantesBeneficiados"
-    t.text     "ubicacion"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "organizaciones", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "direccion"
-    t.string   "representante"
-    t.string   "telefonoRepresentante"
-    t.string   "direccionUrl"
-    t.text     "descripcion"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20190317021725) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "titulo"
     t.text     "descripcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "puntodeentregas", force: :cascade do |t|
+    t.string   "nombre"
+    t.decimal  "habitantesBeneficiados"
+    t.text     "ubicacion"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -62,6 +51,17 @@ ActiveRecord::Schema.define(version: 20190309160121) do
     t.decimal  "edad"
     t.string   "telefono"
     t.string   "organizacion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "restaurantes", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "direccion"
+    t.string   "representante"
+    t.string   "telefonoRepresentante"
+    t.string   "direccionUrl"
+    t.text     "descripcion"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

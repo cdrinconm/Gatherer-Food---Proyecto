@@ -1,4 +1,4 @@
-class Organizaciones < ApplicationRecord
+class Restaurante < ApplicationRecord
   validates :nombre, presence: true, length: {minimum: 5, maximum: 50}
   validates :direccion, presence: true, length: {minimum: 5, maximum: 50}
   validates :representante, presence: true, length: {minimum: 4, maximum: 50}

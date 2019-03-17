@@ -1,4 +1,4 @@
-class Representantes < ApplicationRecord
+class Representante < ApplicationRecord
   validates :nombre, presence: true, length: {minimum: 3, maximum: 50}
   validates :apellido, presence: true, length: {minimum: 3, maximum: 50}
   validates :organizacion, presence: true, length: {minimum: 5, maximum: 50}

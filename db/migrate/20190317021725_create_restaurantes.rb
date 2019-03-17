@@ -1,6 +1,6 @@
-class CreateOrganizaciones < ActiveRecord::Migration[5.0]
+class CreateRestaurantes < ActiveRecord::Migration[5.0]
   def change
-    create_table :organizaciones do |t|
+    create_table :restaurantes do |t|
       t.string :nombre
       t.string :direccion
       t.string :representante

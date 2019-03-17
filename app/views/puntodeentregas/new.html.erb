@@ -1,7 +1,7 @@
-<h1>Agregar un nuevo barrio</h1>
+<h1>Agregar un nuevo Punto de Entrega</h1>
 
-<% if @barrio.errors.any? %>
-    <% @barrios.errors.full_messages.each do |mensaje| %>
+<% if @puntodeentrega.errors.any? %>
+    <% @puntodeentrega.errors.full_messages.each do |mensaje| %>
         <ul>
             <li><%= mensaje %></li>
         </ul>
@@ -10,7 +10,7 @@
 
 <h1>Llene por favor la tabla</h1>
 
-<%= form_for @barrio do |f| %>
+<%= form_for @puntodeentrega do |f| %>
     <p>
         <%= f.label :Nombre %><br/>
         <%= f.text_field :nombre %>

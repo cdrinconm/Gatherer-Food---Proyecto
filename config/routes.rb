@@ -4,15 +4,15 @@ Rails.application.routes.draw do
   
   #root
   root 'pages#home'
-  #barrios
-  
-  get 'barrios/new', to: "barrios#new"
-  get 'barrios/show', to: "barrios#show"
+  #puntodeentregas  
+  get 'puntodeentregas/new', to: "puntodeentregas#new"
+  get 'puntodeentregas/show', to: "puntodeentregas#show"
   #organizaciones
-  get 'organizaciones/new', to: "organizaciones#new"
-  get 'organizaciones/show', to: "organizaciones#show"
+  get 'restaurantes/new', to: "restaurantes#new"
+  get 'restaurantes/show', to: "restaurantes#show"
   #pages
   get 'pages/login', to: "pages#login"
+  get 'pages/registrarse', to: "pages#registrarse"
   #posts
   get 'posts/new', to: "posts#new"
   get 'posts/show', to: "posts#show"
@@ -27,8 +27,8 @@ Rails.application.routes.draw do
   get 'representantes/show', to: "representantes#show"
   
   resources :posts
-  resources :organizaciones
-  resources :barrios
+  resources :restaurantes
+  resources :puntodeentregas
   resources :representantes
   resources :recolectasrealizadas
   resources :recolectaspendientes
