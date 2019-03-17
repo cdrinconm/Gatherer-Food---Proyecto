@@ -8,23 +8,23 @@
 				<%= form_for @user do |f| %>
 				<p>
                     <%= f.label :Nombre %><br/>
-                    <%= f.text_field :nombre %>
+                    <%= f.text_field :nombre, class: "form-control", placeholder: "Agregar info", autofocus: true %>
                 </p>
                 <p>
                     <%= f.label :Apellido %><br/>
-                    <%= f.text_field :apellido %>
+                    <%= f.text_field :apellido, class: "form-control", placeholder: "Agregar info", autofocus: true %>
                 </p>
                 <p>
                     <%= f.label :Usuario %><br/>
-                    <%= f.text_field :usuario %>
+                    <%= f.text_field :usuario, class: "form-control", placeholder: "Agregar info", autofocus: true %>
                 </p>
                 <p>
                     <%= f.label :Contraseña %><br/>
-                    <%= f.text_field :contrasena %>
+                    <%= f.text_field :contrasena, class: "form-control", placeholder: "Agregar info", autofocus: true %>
                 </p>
                 <p>
                     <%= f.label :Empresa %><br/>
-                    <%= f.text_field :empresa %>
+                    <%= f.text_field :empresa, class: "form-control", placeholder: "Agregar info", autofocus: true %>
                 </p>
                 <p>
                     <%= link_to 'Crear Cuenta', pages_registrarse_path, class: "btn btn-primary btl-lg" %><br/>                    
