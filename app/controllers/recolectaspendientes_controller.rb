@@ -1,24 +1,24 @@
-class RecolectasrpendientesController < ApplicationController
+class RecolectaspendientesController < ApplicationController
   def new
-    @Recolectasrpendientes = Recolectasrpendientes.new    
+    @recolectaspendiente = Recolectaspendiente.new    
   end
   
   def create
-    @Recolectasrpendientes = Recolectasrpendientes.new(post_params)
-    if @Recolectasrpendientes.save
+    @recolectaspendiente = Recolectaspendiente.new(post_params)
+    if @recolectaspendiente.save
         flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@Recolectasrpendientes)
+        redirect_to post_path(@recolectaspendiente)
     else
         render 'new'
     end
   end
   
   def show
-    @Recolectasrpendientes = Recolectasrpendientes.find(params[:id])
+    @recolectaspendiente = Recolectaspendiente.find(params[:id])
   end
   
   private
     def post_params
-      params.require(:recolectaspendientes).permit(:organizacion,:fecha,:direccion,:cantidadKilos)
+      params.require(:recolectaspendiente).permit(:organizacion,:fecha,:direccion,:cantidadKilos)
     end
 end

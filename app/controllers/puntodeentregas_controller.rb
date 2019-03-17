@@ -1,4 +1,4 @@
-class PuntodeentregaController < ApplicationController
+class PuntodeentregasController < ApplicationController
   def new
     @puntodeentrega= Puntodeentrega.new
   end
@@ -7,7 +7,7 @@ class PuntodeentregaController < ApplicationController
     @puntodeentrega= Puntodeentrega.new(post_params)
     if @puntodeentrega.save
         flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@puntodeentrega
+        redirect_to post_path(@puntodeentrega)
     else
         render 'new'
     end
@@ -19,6 +19,6 @@ class PuntodeentregaController < ApplicationController
   
   private
     def post_params
-      params.require(:puntodeentregas).permit(:nombre,:habitantesBeneficiados,:ubicacion)
+      params.require(:puntodeentrega).permit(:nombre,:habitantesBeneficiados,:ubicacion)
     end
 end

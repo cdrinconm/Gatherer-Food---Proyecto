@@ -1,4 +1,4 @@
-<h1>Agregar un nuevo Punto de Entrega</h1>
+<h1>Nuevo Punto de Entrega</h1>
 
 <% if @puntodeentrega.errors.any? %>
     <% @puntodeentrega.errors.full_messages.each do |mensaje| %>
@@ -7,33 +7,21 @@
         </ul>
     <%end%>
 <%end%>
-
-<h1>Llene por favor la tabla</h1>
+</br>
+<h4>Llene por favor la siguiente tabla</h4>
 
 <%= form_for @puntodeentrega do |f| %>
     <p>
         <%= f.label :Nombre %><br/>
         <%= f.text_field :nombre %>
+    </p>    
+    <p>
+        <%= f.label :Habitantes_Beneficiados %><br/>
+        <%= f.text_field :habitantesBeneficiados %>
     </p>
     <p>
-        <%= f.label :Direccion %><br/>
-        <%= f.text_field :direccion %>
-    </p>
-    <p>
-        <%= f.label :Representante %><br/>
-        <%= f.text_field :representante %>
-    </p>
-    <p>
-        <%= f.label :Telefono_Representante %><br/>
-        <%= f.text_field :telefonoRepresentante %>
-    </p>
-    <p>
-        <%= f.label :Direccion_Url %><br/>
-        <%= f.text_field :direccionUrl %>
-    </p>
-    <p>
-        <%= f.label :Descripcion %><br/>
-        <%= f.text_area :descripcion %>  
+        <%= f.label :Ubicacion %><br/>
+        <%= f.text_field :ubicacion %>
     </p>
     <p>
         <%= f.submit %>

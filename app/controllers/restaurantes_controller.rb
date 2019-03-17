@@ -19,6 +19,6 @@ class RestaurantesController < ApplicationController
   
   private
     def post_params
-      params.require(:restaurantes).permit(:nombre,:direccion,:representante,:telefonoRepresentante,:direccionUrl,:descripcion)
+      params.require(:restaurante).permit(:nombre,:direccion,:representante,:telefonoRepresentante,:direccionUrl,:descripcion)
     end
 end

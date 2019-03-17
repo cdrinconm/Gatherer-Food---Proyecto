@@ -1,24 +1,24 @@
 class RecolectasrealizadasController < ApplicationController
   def new
-    @Recolectasrealizadas = Recolectasrealizadas.new    
+    @recolectasrealizada = Recolectasrealizada.new    
   end
   
   def create
-    @Recolectasrealizadas = Recolectasrealizadas.new(post_params)
-    if @Recolectasrealizadas.save
+    @recolectasrealizada = Recolectasrealizada.new(post_params)
+    if @recolectasrealizada.save
         flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@Recolectasrealizadas)
+        redirect_to post_path(@recolectasrealizada)
     else
         render 'new'
     end
   end
   
   def show
-    @Recolectasrealizadas = Recolectasrealizadas.find(params[:id])
+    @recolectasrealizada = Recolectasrealizada.find(params[:id])
   end
   
   private
     def post_params
-      params.require(:recolectaspendientes).permit(:organizacion,:fecha,:direccion,:cantidadKilos)
+      params.require(:recolectasrealizada).permit(:organizacion,:fecha,:direccion,:cantidadKilos)
     end
 end

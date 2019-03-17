@@ -1,21 +1,37 @@
-<h1>Formulario de Restaurantes</h1>
-<!--
-<% if @post.errors.any? %>
-    <% @post.errors.full_messages.each do |mensaje| %>
+<h1>Añadir nuevo Restaurante</h1>
+
+<% if @restaurante.errors.any? %>
+    <% @restaurante.errors.full_messages.each do |mensaje| %>
         <ul>
             <li><%= mensaje %></li>
         </ul>
     <%end%>
 <%end%>
--->
-<h1>Llene por favor la tabla</h1>
-<%= form_for @post do |f| %>
+</br>
+<h4>Llene por favor la tabla</h4>
+<%= form_for @restaurante do |f| %>
     <p>
-        <%= f.label :titulo %><br/>
-        <%= f.text_field :titulo %>
+        <%= f.label :Nombre %><br/>
+        <%= f.text_field :nombre %>
     </p>
     <p>
-        <%= f.label :descripcion %><br/>
+        <%= f.label :Direccion %><br/>
+        <%= f.text_field :direccion %>
+    </p>
+    <p>
+        <%= f.label :Representante %><br/>
+        <%= f.text_field :representante %>
+    </p>
+    <p>
+        <%= f.label :Telefono_de_Contacto %><br/>
+        <%= f.text_field :telefonoRepresentante %>
+    </p>
+    <p>
+        <%= f.label :Pagina_Web %><br/>
+        <%= f.text_field :direccionUrl %>
+    </p>
+    <p>
+        <%= f.label :Descripcion %><br/>
         <%= f.text_area :descripcion %>  
     </p>
     <p>

@@ -1,22 +1,34 @@
-<h1>Formulario de Representantes</h1>
-<!--
-<% if @post.errors.any? %>
-    <% @post.errors.full_messages.each do |mensaje| %>
+<h1>Añadir nuevo Representante</h1>
+
+<% if @representante.errors.any? %>
+    <% @representante.errors.full_messages.each do |mensaje| %>
         <ul>
             <li><%= mensaje %></li>
         </ul>
     <%end%>
 <%end%>
--->
-<h1>Llene por favor la tabla</h1>
-<%= form_for @post do |f| %>
+</br>
+<h4>Llene por favor la tabla</h4>
+<%= form_for @representante do |f| %>
     <p>
-        <%= f.label :titulo %><br/>
-        <%= f.text_field :titulo %>
+        <%= f.label :Nombre %><br/>
+        <%= f.text_field :nombre %>
     </p>
     <p>
-        <%= f.label :descripcion %><br/>
-        <%= f.text_area :descripcion %>  
+        <%= f.label :Apellido %><br/>
+        <%= f.text_field :apellido %>
+    </p>
+    <p>
+        <%= f.label :Edad %><br/>
+        <%= f.text_field :edad %>
+    </p>
+    <p>
+        <%= f.label :Telefono %><br/>
+        <%= f.text_field :telefono %>
+    </p>
+    <p>
+        <%= f.label :Organizacion %><br/>
+        <%= f.text_field :organizacion %>
     </p>
     <p>
         <%= f.submit %>
