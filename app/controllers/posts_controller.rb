@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-        flash[:notice] = "El post se creo satisfactoriamente"
         redirect_to post_path(@post)
     else
         render 'new'

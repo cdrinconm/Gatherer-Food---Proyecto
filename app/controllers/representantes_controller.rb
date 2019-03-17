@@ -5,9 +5,8 @@ class RepresentantesController < ApplicationController
   
   def create
     @representante = Representante.new(post_params)
-    if @representantes.save
-        flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@representante)
+    if @representante.save
+        redirect_to representante_path(@representante)
     else
         render 'new'
     end

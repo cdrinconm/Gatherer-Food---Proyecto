@@ -6,8 +6,7 @@ class RestaurantesController < ApplicationController
   def create
     @restaurante = Restaurante.new(post_params)
     if @restaurante.save
-        flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@restaurante)
+        redirect_to restaurante_path(@restaurante)
     else
         render 'new'
     end

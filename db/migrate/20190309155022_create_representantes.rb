@@ -3,7 +3,7 @@ class CreateRepresentantes < ActiveRecord::Migration[5.0]
     create_table :representantes do |t|
       t.string :nombre
       t.string :apellido
-      t.numeric :edad
+      t.integer :edad
       t.string :telefono
       t.string :organizacion
       t.datetime :created_at

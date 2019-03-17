@@ -6,8 +6,7 @@ class PuntodeentregasController < ApplicationController
   def create
     @puntodeentrega= Puntodeentrega.new(post_params)
     if @puntodeentrega.save
-        flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@puntodeentrega)
+        redirect_to puntodeentrega_path(@puntodeentrega)
     else
         render 'new'
     end

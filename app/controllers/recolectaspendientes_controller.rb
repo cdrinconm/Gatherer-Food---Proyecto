@@ -6,8 +6,7 @@ class RecolectaspendientesController < ApplicationController
   def create
     @recolectaspendiente = Recolectaspendiente.new(post_params)
     if @recolectaspendiente.save
-        flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@recolectaspendiente)
+        redirect_to recolectaspendiente_path(@recolectaspendiente)
     else
         render 'new'
     end

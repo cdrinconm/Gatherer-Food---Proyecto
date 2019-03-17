@@ -6,8 +6,7 @@ class RecolectasrealizadasController < ApplicationController
   def create
     @recolectasrealizada = Recolectasrealizada.new(post_params)
     if @recolectasrealizada.save
-        flash[:notice] = "El post se creo satisfactoriamente"
-        redirect_to post_path(@recolectasrealizada)
+        redirect_to recolectasrealizada_path(@recolectasrealizada)
     else
         render 'new'
     end
