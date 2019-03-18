@@ -1,1 +1,22 @@
-
+<h1>Usuarios</h1>
+</br>
+<table>
+    <tr>
+        <th> Nombre </th>
+        <th> Apellido</th>
+        <th> Usuario </th>
+        <th> Contraseña</th>
+    </tr>
+    <% @user.each do |item| %>
+    <tr>
+        <td><%= item.nombre %></td>
+        <td><%= item.apellido %></td>
+        <td><%= item.usuario %></td>
+        <td><%= item.contrasena %></td>
+        <td><%= link_to "Editar", edit_user_path(item.id), class: "btn btn-xs btn-primary" %></td>
+        <td><%= link_to "Mostrar", user_path(item), class: "btn btn-xs btn-success" %></td>
+        <td><%= link_to "Eliminar", user_path(item), method: :delete, data: {confirm: "Seguro desea eliminar?"}, class: "btn btn-xs btn-danger" %></td>
+    </tr>
+    <%end%>
+    <%= link_to 'Añadir nuevo usuario', new_user_path, class: "btn btn-xs btn-success" %>
+</table>

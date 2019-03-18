@@ -2,25 +2,37 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 offset-md-4">
-				<h1>Ingresar</h1>
+				<h1>Editar Usuario!</h1>
+				<br>
 				<%= form_for @user do |f| %>
 				<p>
+                    <%= f.label :Nombre %><br/>
+                    <%= f.text_field :nombre, class: "form-control", placeholder: "Agregar info", autofocus: true %>
+                </p>
+                <p>
+                    <%= f.label :Apellido %><br/>
+                    <%= f.text_field :apellido, class: "form-control", placeholder: "Agregar info", autofocus: true %>
+                </p>
+                <p>
                     <%= f.label :Usuario %><br/>
-                    <%= f.text_field :user %>
+                    <%= f.text_field :usuario, class: "form-control", placeholder: "Agregar info", autofocus: true %>
                 </p>
                 <p>
                     <%= f.label :Contraseña %><br/>
-                    <%= f.text_field :contrasena %>
-                </p></br>
-                <p>                   
-                    <%= link_to 'Registrate', pages_registrate_path, class: "btn btn-primary btl-lg" %>
+                    <%= f.text_field :contrasena, class: "form-control", placeholder: "Agregar info", autofocus: true %>
                 </p>
-                <%end%>
+                <p>
+                    <%= f.label :Empresa %><br/>
+                    <%= f.text_field :empresa, class: "form-control", placeholder: "Agregar info", autofocus: true %>
+                </p>
+                <p>
+                    <%= f.submit class: "btn btn-primary btn-lg" %>
+                </p>
+				<%end%>
 			</div>
 		</div>
 	</div>		
 </header>
 <br>
 <br>
-<%= link_to 'Home', root_path %>
 

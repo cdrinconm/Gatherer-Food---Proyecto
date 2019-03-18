@@ -1,24 +1,20 @@
 <header>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 offset-md-4">
-				<h1>Ingresar</h1>
-				<%= form_for @user do |f| %>
-				<p>
-                    <%= f.label :Usuario %><br/>
-                    <%= f.text_field :user %>
-                </p>
-                <p>
-                    <%= f.label :Contraseña %><br/>
-                    <%= f.text_field :contrasena %>
-                </p></br>
-                <p>                   
-                    <%= link_to 'Registrate', pages_registrate_path, class: "btn btn-primary btl-lg" %>
-                </p>
-                <%end%>
-			</div>
-		</div>
-	</div>		
+	<div class="center jumbotron">
+	   <div class="container">
+    		<h1>Ingresar</h1></br>
+    		<p>
+                <h4>Usuario</h4><br/>
+                <input title="Please Enter Your First Name" id="first" name="first" type="text" />
+            </p>
+            <p>
+                <h4>Contraseña</h4><br/>
+                <input title="Please Enter Your First Name" id="first" name="first" type="text" />
+            </p></br>
+            <p>                   
+                <%= link_to 'Ingresar', root_path, class: "btn btn-primary btl-lg" %>
+            </p>
+        </div>
+	</div>				
 </header>
 <br>
 <br>

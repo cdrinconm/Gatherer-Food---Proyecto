@@ -1,0 +1,15 @@
+<h1>Nuevo usuario añadido!</h1>
+<p>
+    Nombre: <%= @user.nombre %>
+</p>
+<p>
+    Apellido: <%= @user.apellido %>
+</p>
+<p>
+    Usuario: <%= @user.usuario %>
+</p>
+<p>
+     Contraseña: <%= @user.contrasena %>
+</p>
+<%= link_to 'Volver al indice de usuario', users_path, class: "btn btn-xs btn-success" %>
+<%= link_to 'Editar usuario', edit_user_path(@user.id), class: "btn btn-xs btn-primary" %>
