@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Gatherer Food es un proyecto de software creado en Ruby on Rails y con despliegue en Heroku.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+La idea de este proyecto es realizar un software que permita la coneccion con diferentes empresas que realicen eventos en los cuales usen o distribuyan alimentos. Los cuales en la mayoria de eventos tienden a sobrar. Gatherer Food recogeria y guardaria informacion de dichos alimentos para luego distribuirlos y repartirlos de forma adcuada a habitantes de la calle o personas necesitadas.
